@@ -2,7 +2,7 @@
 
 ## Theory
 
-`XCrySDen` is a graphical visualization program commonly used with Quantum ESPRESSO and other electronic-structure codes. It is used to visualize crystal structures, atomic positions, unit cells, and Quantum ESPRESSO input/output files. Unlike `thermo_pw`, XCrySDen is a standalone program and does not need to be compiled inside the Quantum ESPRESSO source tree. On Ubuntu, it can be installed directly using the package manager. However, on some systems XCrySDen may fail to open because of OpenGL/ToGL compatibility issues. In such cases, the `custom-definitions` file can be copied to the user's home directory and `toglopt false` can be enabled to disable the ToGL option.
+`XCrySDen` is a graphical visualization program commonly used with Quantum ESPRESSO and other electronic-structure codes. It is used to visualize crystal structures, atomic positions, unit cells, and Quantum ESPRESSO input/output files.
 
 ## Procedure
 
