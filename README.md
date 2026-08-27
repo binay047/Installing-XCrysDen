@@ -7,18 +7,22 @@
 ## Procedure
 
 - Update the package list:
+  
     ```bash
-    sudo apt updat e
-```
+    sudo apt update
+``
 
 - Install XCrySDen:
-```bash
+
+   ```bash
     sudo apt install xcrysden
-```
+``
 - Check whether XCrySDen has been installed correctly:
+  
   ```bash
     which xcrysden
-```
+``
+
 - Start XCrySDen:
 ```bash
     xcrysden
