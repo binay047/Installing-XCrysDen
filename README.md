@@ -10,18 +10,18 @@
   
     ```bash
     sudo apt update
-``
+
 
 - Install XCrySDen:
 
    ```bash
     sudo apt install xcrysden
-``
+
 - Check whether XCrySDen has been installed correctly:
   
   ```bash
     which xcrysden
-``
+
 
 - Start XCrySDen:
 ```bash
