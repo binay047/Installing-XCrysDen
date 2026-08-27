@@ -7,46 +7,45 @@
 ## Procedure
 
 - Update the package list:
-
-    sudo apt update
+    ```bash
+    sudo apt updat e
+```
 
 - Install XCrySDen:
-
+```bash
     sudo apt install xcrysden
-
+```
 - Check whether XCrySDen has been installed correctly:
-
+  ```bash
     which xcrysden
-
+```
 - Start XCrySDen:
-
+```bash
     xcrysden
-
+```
 - If XCrySDen opens normally, congratulations!!!
 
-- If XCrySDen does not open or gives an OpenGL/ToGL error, first run it from the terminal and check the error message:
-
-    xcrysden
+- If XCrySDen does not open or gives an OpenGL/ToGL error
 
 - Create the XCrySDen configuration directory:
-
+```bash
     mkdir -p ~/.xcrysden
-
+```
 - Copy the default `custom-definitions` file to the user configuration directory:
-
+```bash
     cp /usr/share/xcrysden/Tcl/custom-definitions ~/.xcrysden/
-
+```
 - Open the copied file:
-
+```bash
     nano ~/.xcrysden/custom-definitions
-
+```
 - Find the following line:
 
-    # toglopt false
+    #set toglOpt(accum) false
 
 - Remove `#` from the beginning so that it becomes:
 
-    toglopt false
+  set toglOpt(accum) false
 
 - Save and exit:
 
@@ -55,34 +54,22 @@
     Ctrl + X
 
 - Start XCrySDen again:
-
+```bash
     xcrysden
-
+```
 - To open a Quantum ESPRESSO input file:
-
+```bash
     xcrysden --pwi scf.in
-
+```
 - To open a Quantum ESPRESSO output file:
-
+```bash
     xcrysden --pwo scf.out
-
+```
 - To open a CIF file:
-
+```bash
     xcrysden --cif structure.cif
+```
 
-- If XCrySDen still does not open, install OpenGL utilities:
 
-    sudo apt install mesa-utils
+- **Note:** `set toglOpt(accum) false` is not required for every XCrySDen installation. It is only a troubleshooting step for OpenGL/ToGL-related startup problems.
 
-- Check the OpenGL configuration:
-
-    glxinfo | grep "OpenGL"
-
-- If using an NVIDIA GPU, check the NVIDIA driver:
-
-    nvidia-smi
-
-- **Note:** `toglopt false` is not required for every XCrySDen installation. It is only a troubleshooting step for OpenGL/ToGL-related startup problems.
-- **Note:** Do not modify `/usr/share/xcrysden/Tcl/custom-definitions` directly. Copy it to `~/.xcrysden/` and modify the user-specific copy.
-- **Note:** XCrySDen does not need to be installed inside the Quantum ESPRESSO source directory.
-- **Reference:** http://www.xcrysden.org/
